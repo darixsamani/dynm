@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {Select, Input, Button} from "antd";
 
 const  AhdhesiveElement = function ({add, options, OnDeleteOption, index, OnAddhesiveSelect, onRemoveAdhesive, OnAddhesiveElmSelect}) {
@@ -6,6 +6,7 @@ const  AhdhesiveElement = function ({add, options, OnDeleteOption, index, OnAddh
     console.log(index);
 
     const {Option} = Select;
+
     return (
     <div style={{display:"flex", "gap":"8px", flexDirection:"row"}}>
             <Select style={{ width: "130px" }} onChange={value => OnAddhesiveSelect(value, index)}>

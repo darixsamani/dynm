@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import 'antd/dist/antd.css';
 
-import React, { useState } from 'react';
+import React from 'react';
 import {Steps, Button, message} from 'antd';
 
 import Adhesive from './Components/Adhesive';

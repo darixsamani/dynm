@@ -2,28 +2,27 @@ import AhdhesiveElement from './AdhesiveComponent';
 import React, {useState} from 'react';
 
 import {PlusCircleOutlined, InboxOutlined} from '@ant-design/icons';
-import { Form, Modal, Button, Select, Upload, Input, Space, notification, Steps, message } from 'antd';
-import { icons } from 'antd/lib/image/PreviewGroup';
+import { Button, Upload, notification} from 'antd';
 
 
 function Adhesive(){
 
     const [adhesive, setAdhesive] = useState([{"option":["name", "brand", "family"], "name":""}])
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  // const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const {Option} = Select;
+  // const {Option} = Select;
   
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
+  // const showModal = () => {
+  //   setIsModalVisible(true);
+  // };
 
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
+  // const handleOk = () => {
+  //   setIsModalVisible(false);
+  // };
 
-  const handleCancel = () => {
-    setIsModalVisible(false);
-  };
+  // const handleCancel = () => {
+  //   setIsModalVisible(false);
+  // };
 
 
   const add_adhesive = () => {
@@ -50,10 +49,10 @@ function Adhesive(){
     let adh = []
     for (const [i, elm] of adhesive.entries()){
       // console.log(index, elm);
-      if(i!=index){
+      if(i!==index){
         console.log(index, elm);
-        console.log(elm["option"].filter((x) => x!=value));
-        adh.push({"option":["name", "brand", "family"].filter((x) => x!=value), "name": elm["name"]})
+        console.log(elm["option"].filter((x) => x!==value));
+        adh.push({"option":["name", "brand", "family"].filter((x) => x!==value), "name": elm["name"]})
       }
       else{
         console.log(elm)
@@ -71,7 +70,7 @@ function Adhesive(){
 
     console.log(index, "remove");
     // console.log(adhesive.filter((_x, i) => i!=index));
-    setAdhesive(adhesive.filter((_x, i) => i!=index));
+    setAdhesive(adhesive.filter((_x, i) => i!==index));
   }
 
   const OnAddhesiveElmSelect = (index, value) => {
